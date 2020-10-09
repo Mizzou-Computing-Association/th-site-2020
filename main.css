@@ -1,0 +1,77 @@
+html {
+  scroll-behavior: smooth;
+}
+
+a, a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: Outage;
+  src: url(Outage.ttf);
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url(AvenirNextRoundedProRegular.ttf);
+}
+
+h1 {
+  font-family: Outage;
+}
+div {
+  text-align: center;
+}
+
+#landing {
+  background-color: #fef8e2;
+  color: black;
+  padding: 15px 25px;
+  text-align: center;
+  position: absolute;
+  border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+#landing img{
+  max-width: 300px;
+}
+
+#faq_section {
+  width: 60%;
+  margin: 0px auto;
+  position: absolute;
+  top: 800px;
+  left: 20%;
+}
+
+#faq_section button {
+  color: white;
+  text-decoration: none;
+  font-family: "Outage", sans-serif;
+  font-size: 20pt;
+}
+
+#faq_section button:hover {
+  color: orange;
+  text-decoration: none;
+}
+
+.card {
+  border: 0px;
+}
+
+.card-header {
+  background-color: rgba(106, 106, 106, 0.64);
+}
+
+.card-body {
+  border-left: 2px solid gray;
+  border-right: 2px solid gray;
+  font-family: "Avenir", sans-serif;
+}
