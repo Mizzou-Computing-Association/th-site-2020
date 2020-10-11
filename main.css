@@ -24,6 +24,33 @@ div {
   text-align: center;
 }
 
+nav {
+  position: fixed;
+  display: flex;
+  z-index: 10;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  top: 0;
+  right: 0;
+  margin-right: 10px;
+}
+
+nav a {
+  color: lightgray;
+  font-family: "Outage", sans-serif;
+  text-align: right;
+}
+
+nav a:hover {
+  color: orange;
+}
+
+.nav-active {
+  color: orange;
+  font-size: 20pt;
+}
+
 #landing {
   background-color: #fef8e2;
   color: black;
@@ -44,6 +71,7 @@ div {
 
 #faq_section {
   width: 60%;
+  padding-top: 50px;
   margin: 0px auto;
   position: absolute;
   top: 800px;
@@ -60,6 +88,31 @@ div {
 #faq_section button:hover {
   color: orange;
   text-decoration: none;
+}
+
+#schedule_section {
+  padding-top: 50px;
+  width: 60%;
+  position: absolute;
+  top: 2000px;
+  left: 20%;
+}
+
+#prizes_section {
+  padding-top: 50px;
+  position: absolute;
+  top: 3000px;
+}
+
+#sponsors_section {
+  padding-top: 50px;
+  position: absolute;
+  top: 4000px;
+}
+
+#footer {
+  position: absolute;
+  top: 5000px;
 }
 
 .card {
