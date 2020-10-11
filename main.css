@@ -20,6 +20,7 @@ a, a:hover {
 h1 {
   font-family: Outage;
 }
+
 div {
   text-align: center;
 }
@@ -44,11 +45,20 @@ nav a {
 
 nav a:hover {
   color: orange;
+  animation: grow-text 0.5s;
+  animation-fill-mode: forwards;
 }
 
 .nav-active {
   color: orange;
-  font-size: 20pt;
+  animation: grow-text 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.nav-inactive {
+  color: lightgray;
+  animation: shrink-text 0.5s;
+  animation-fill-mode: forwards;
 }
 
 #landing {
@@ -127,4 +137,24 @@ nav a:hover {
   border-left: 2px solid gray;
   border-right: 2px solid gray;
   font-family: "Avenir", sans-serif;
+}
+
+/*** ANIMATIONS ***/
+
+@keyframes grow-text {
+  from {
+    font-size: 16pt;
+  }
+  to {
+    font-size: 20pt;
+  }
+}
+
+@keyframes shrink-text {
+  from {
+    font-size: 20pt;
+  }
+  to {
+    font-size: 16pt;
+  }
 }

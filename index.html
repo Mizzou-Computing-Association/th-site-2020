@@ -189,10 +189,13 @@
         for (i in sections) {
           name = sections[i]
           if ($("#" + name + "_section").visible()) {
+            $("#" + name + "_link").removeClass("nav-inactive");
             $("#" + name + "_link").addClass("nav-active");
-            console.log(name);
           } else {
-            $("#" + name + "_link").removeClass("nav-active");
+            if ($("#" + name + "_link").hasClass("nav-active")) {
+              $("#" + name + "_link").removeClass("nav-active");
+              $("#" + name + "_link").addClass("nav-inactive");
+            }
           }
         } 
       });
