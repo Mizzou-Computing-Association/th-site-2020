@@ -1,230 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Bootstrap Things -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    
-    <script type="text/javascript" src="../jquery.visible.js"></script>
-    <link rel="stylesheet" href="main.css">
-  </head>
-  <body>
-    <nav>
-      <a href="#faq_section" id="faq_link">FAQ</a>
-      <a href="#schedule_section" id="schedule_link">Schedule</a>
-      <a href="#prizes_section" id="prizes_link">Prizes</a>
-      <a href="#sponsors_section" id="sponsors_link">Sponsors</a>
-    </nav>
-    
-    <div id="landing">
-      <img src="tiger.png"/>
-      <h1>TigerHacks 2020</h1>
-    </div>
-    
-    <!--- FAQ Section -->
-    <div class="accordion" id="faq_section">
-      <h1>Frequently Asked Questions</h1>
-      <div class="card">
-        <div class="card-header" id="headingOne">
-          <h2 class="mb-0">
-            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-              What happens at a hackathon?
-            </button>
-          </h2>
-        </div>
-        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#faq_section">
-          <div class="card-body">
-            Participants (“hackers”) spend 36 hours working in small teams to build or code or design projects (“hacks”) that they’re excited about. There are workshops, mentors, food, swag, and buckets of coffee to guide you along the way. You bring your ideas, and we give you everything you need to make them come to life.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" id="headingTwo">
-          <h2 class="mb-0">
-            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              How many people are on a team?
-            </button>
-          </h2>
-        </div>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faq_section">
-          <div class="card-body">
-            We STRONGLY SUGGEST you have no more than 4 people on a team. There will be four of each prize regardless of your team size, which may leave some of you unhappy campers. Additionally, larger teams tend to get unwieldy.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" id="headingThree">
-          <h2 class="mb-0">
-            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              What do people normally make?
-            </button>
-          </h2>
-        </div>
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faq_section">
-          <div class="card-body">
-            Any number of things: web development, Android, iOS, AI/ML, AR/VR, game development, or hardware. Whatever interests you most is likely to yield the best results :)
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" id="headingFour">
-          <h2 class="mb-0">
-            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-              Do I have to know how to code to attend?
-            </button>
-          </h2>
-        </div>
-        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faq_section">
-          <div class="card-body">
-            Nope! We’ll have lots of resources including workshops and a sweet mentorship system to help beginners get started. We will also dedicate one room to new hackers and have several project ideas to help you get started.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" id="headingFive">
-          <h2 class="mb-0">
-            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-              Who runs TigerHacks?
-            </button>
-          </h2>
-        </div>
-        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faq_section">
-          <div class="card-body">
-            TigerHacks is organized and hosted by a group of dedicated and passionate young nerds, who are members of the Mizzou Computing Association at the University of Missouri.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" id="headingSix">
-          <h2 class="mb-0">
-            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-              I didn't find my question here...
-            </button>
-          </h2>
-        </div>
-        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#faq_section">
-          <div class="card-body">
-            If you've got something else on your mind, sent it our way at muengrtigerhacks@missouri.edu!
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Schedule Section -->
-      <div class="schedule" id="schedule_section">
-        <h1> Schedule </h1>
-        <div class = "row">
-            <div class = "col">
-                <h3>November 8th</h3>
-                <div class = "row">
-                    <div class = "col col-12">
-                        <div class = "card-schedule">
-                            <div class = "card-title">
-                                <h4>
-                                    Check-In Begins
-                                </h4>
-                                <p class = "card-text">
-                                    5:00 PM @ 1st Floor Lafferre - West Entrance
-                                </p>
-                            </div>
-                        </div> 
-                    </div>
-                </div>
-            
-            </div>
-            <div class = "col">
-                <h3>November 9th</h3>
-                <div class = "row">
-                    <div class = "col col-12">
-                        <div class = "card-schedule">
-                            <div class = "card-title">
-                                <h4>
-                                    Check-In Begins
-                                </h4>
-                                <p class = "card-text">
-                                    5:00 PM @ 1st Floor Lafferre - West Entrance
-                                </p>
-                            </div>
-                        </div> 
-                    </div>
-                </div>
-            </div>
-            <div class = "col">
-                <h3>November 10th</h3>
-                <div class = "row">
-                    <div class = "col col-12">
-                        <div class = "card-schedule">
-                            <div class = "card-title">
-                                <h4>
-                                    Check-In Begins
-                                </h4>
-                                <p class = "card-text">
-                                    5:00 PM @ 1st Floor Lafferre - West Entrance
-                                </p>
-                            </div>
-                        </div> 
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
-    
-    <div id="prizes_section">
-      <h1>Prizes</h1>
-      
-    </div>
+  <!-- Bootstrap Things -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-    <div id="sponsors_section">
-      <h1>Sponsors</h1>
-      <div class="gold_sponsor">
-        <img src="tiger.png">
-      </div>
-    </div>
-    
-      
-    <!-- Form Section -->
-    <div id="registration-form">
-      <form>
-        <div class= "row">
-            <div class="col">
-                <div class="form-group">
-                  <label for="inputFirst">First Name</label>
-                  <input type="text" class="form-control" id="inputFirst" placeholder="Required">
-                </div>
-            </div>
-            <div class="col">
-                <div class="form-group">
-                  <label for="inputLast">Last Name</label>
-                  <input type="text" class="form-control" id="inputLast" placeholder="Required">
-                </div>
-            </div>
-          </div>
-        <div class="form-group">
-          <label for="inputEmail1">Email address</label>
-          <input type="email" class="form-control" id="inputEmail1" placeholder="Required">
+  <script type="text/javascript" src="../jquery.visible.js"></script>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <nav>
+    <a href="#faq_section" id="faq_link">FAQ</a>
+    <a href="#schedule_section" id="schedule_link">Schedule</a>
+    <a href="#prizes_section" id="prizes_link">Prizes</a>
+    <a href="#sponsors_section" id="sponsors_link">Sponsors</a>
+  </nav>
+
+  <div id="landing">
+    <img src="tiger.png" />
+    <h1>TigerHacks 2020</h1>
+  </div>
+
+  <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#regModal" id="register-button">Register</button>
+
+  <div class="modal fade " id="regModal" data-keyboard="false" tabindex="-1" aria-labelledby="regModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="regModalLabel">TigerHacks Registration</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-        <div class= "row">
-            <div class="col">
-                <div class="form-group">
+        <div class="modal-body">
+          <div id="registration-form">
+            <form>
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="inputFirst">First Name</label>
+                    <input type="text" class="form-control" id="inputFirst" placeholder="Required">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="inputLast">Last Name</label>
+                    <input type="text" class="form-control" id="inputLast" placeholder="Required">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail1">Email address</label>
+                <input type="email" class="form-control" id="inputEmail1" placeholder="Required">
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
                     <label for="inputPhone">Phone Number</label>
                     <div class="input1"><input type="tel" placeholder="Required">
-                    <p class="info">FORMAT: (Area Code)-888-8888</p>
+                      <p class="info">FORMAT: (Area Code)-888-8888</p>
                     </div>
+                  </div>
                 </div>
-            </div>
-            <div class="col">
-                <label class="mr-sm-2" for="inlineFormCustomSelect">School</label>
-                <select class="form-control">
+                <div class="col">
+                  <label class="mr-sm-2" for="inlineFormCustomSelect">School</label>
+                  <select class="form-control">
                     <option>Optional</option>
-                </select>
-            </div> 
-        </div>
-        <div class= "row">
-            <div class="col">
-                <div class="form-group">
-                <label for="formGroupExampleInput">Gender (optional): </label>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Gender (optional): </label>
                     <div class="form-check form-check-inline">
                       <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
                       <label class="form-check-label" for="inlineCheckbox1">Male</label>
@@ -234,87 +85,256 @@
                       <label class="form-check-label" for="inlineCheckbox2">Female</label>
                     </div>
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" >
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
                       <label class="form-check-label" for="inlineCheckbox3">Other</label>
                     </div>
+                  </div>
                 </div>
-            </div>
-            
-            <div class="col">
-                <div class="form-group">
-                  <label class="mr-sm-2" for="inlineFormCustomSelect">Ethnicity</label>
-                <select class="form-control">
-                    <option></option>
-                    <option>American Indian or Alaskan Native</option>
-                    <option>Asian/Pacific Islander</option>
-                    <option>Black or African American</option>
-                    <option>Hispanic</option>
-                    <option>White/Caucasian</option>
-                    <option>Multiple ethnicity/Other</option>
-                    <option>Prefer not to answer</option>
-                </select>
+
+                <div class="col">
+                  <div class="form-group">
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">Ethnicity</label>
+                    <select class="form-control">
+                      <option></option>
+                      <option>American Indian or Alaskan Native</option>
+                      <option>Asian/Pacific Islander</option>
+                      <option>Black or African American</option>
+                      <option>Hispanic</option>
+                      <option>White/Caucasian</option>
+                      <option>Multiple ethnicity/Other</option>
+                      <option>Prefer not to answer</option>
+                    </select>
+                  </div>
                 </div>
-            </div>
-          </div>
-        <div class= "row">
-            <div class="col">
-                <div class="form-group">
-                  <label for="inputMajor">Major</label>
-                  <input type="text" class="form-control" placeholder="Optional">
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="inputMajor">Major</label>
+                    <input type="text" class="form-control" placeholder="Optional">
+                  </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="form-group">
-                  <label for="inputLevel">Current Level of Study</label>
-                  <input type="text" class="form-control" placeholder="Optional">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="inputLevel">Current Level of Study</label>
+                    <input type="text" class="form-control" placeholder="Optional">
+                  </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="form-group">
-                  <label for="inputGradYear">Month and Year of Graduation</label>
-                  <input type="text" class="form-control" placeholder="Optional (example: May 2021)">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="inputGradYear">Month and Year of Graduation</label>
+                    <input type="text" class="form-control" placeholder="Optional (example: May 2021)">
+                  </div>
                 </div>
-            </div>
-          </div>
-          
-        
+              </div>
               <label for="inputEmail1">How Did You Hear About Us?</label>
               <input type="email" class="form-control" id="inputEmail1" placeholder="Optional">
-          
-        
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="check1">
+                <label class="form-check-label" for="check1">I have read and agree to the <a href="http://mlh.io/code-of-conduct" target="_blank">MLH Code of Conduct</a></label>
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="check2">
+                <label class="form-check-label" for="check2">I authorize you to share my application/registration information for event administration, ranking, MLH administration, pre- and post-event informational emails, and occasional messages about hackathons in-line with the <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>. I further agree to the terms of both the <a target="_blank" href="https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md">MLH Contest Terms and Conditions</a> and the <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>.</label>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-        <div class="form-group form-check">
-          <input type="checkbox" class="form-check-input" id="check1">
-          <label class="form-check-label" for="check1">I have read and agree to the <a href="http://mlh.io/code-of-conduct" target="_blank">MLH Code of Conduct</a></label>
+
+  <!--- FAQ Section -->
+  <div class="accordion" id="faq_section">
+    <h1>Frequently Asked Questions</h1>
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            What happens at a hackathon?
+          </button>
+        </h2>
+      </div>
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#faq_section">
+        <div class="card-body">
+          Participants (“hackers”) spend 36 hours working in small teams to build or code or design projects (“hacks”) that they’re excited about. There are workshops, mentors, food, swag, and buckets of coffee to guide you along the way. You bring your ideas, and we give you everything you need to make them come to life.
         </div>
-        <div class="form-group form-check">
-          <input type="checkbox" class="form-check-input" id="check2">
-          <label class="form-check-label" for="check2">I authorize you to share my application/registration information for event administration, ranking, MLH administration, pre- and post-event informational emails, and occasional messages about hackathons in-line with the <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>. I further agree to the terms of both the <a>MLH Contest Terms and Conditions</a> and the <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>.</label>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            How many people are on a team?
+          </button>
+        </h2>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faq_section">
+        <div class="card-body">
+          We STRONGLY SUGGEST you have no more than 4 people on a team. There will be four of each prize regardless of your team size, which may leave some of you unhappy campers. Additionally, larger teams tend to get unwieldy.
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+      </div>
     </div>
-    
-    <div id="footer">
-      <p>Contact Us</p>
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            What do people normally make?
+          </button>
+        </h2>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faq_section">
+        <div class="card-body">
+          Any number of things: web development, Android, iOS, AI/ML, AR/VR, game development, or hardware. Whatever interests you most is likely to yield the best results :)
+        </div>
+      </div>
     </div>
-    
-    <script>
-      sections = ["faq", "schedule", "prizes", "sponsors"]
-      $(window).scroll(function() {
-        for (i in sections) {
-          name = sections[i]
-          if ($("#" + name + "_section").visible()) {
-            $("#" + name + "_link").removeClass("nav-inactive");
-            $("#" + name + "_link").addClass("nav-active");
-          } else {
-            if ($("#" + name + "_link").hasClass("nav-active")) {
-              $("#" + name + "_link").removeClass("nav-active");
-              $("#" + name + "_link").addClass("nav-inactive");
-            }
+    <div class="card">
+      <div class="card-header" id="headingFour">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            Do I have to know how to code to attend?
+          </button>
+        </h2>
+      </div>
+      <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faq_section">
+        <div class="card-body">
+          Nope! We’ll have lots of resources including workshops and a sweet mentorship system to help beginners get started. We will also dedicate one room to new hackers and have several project ideas to help you get started.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingFive">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            Who runs TigerHacks?
+          </button>
+        </h2>
+      </div>
+      <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faq_section">
+        <div class="card-body">
+          TigerHacks is organized and hosted by a group of dedicated and passionate young nerds, who are members of the Mizzou Computing Association at the University of Missouri.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingSix">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+            I didn't find my question here...
+          </button>
+        </h2>
+      </div>
+      <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#faq_section">
+        <div class="card-body">
+          If you've got something else on your mind, sent it our way at muengrtigerhacks@missouri.edu!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Schedule Section -->
+  <div class="schedule" id="schedule_section">
+    <h1> Schedule </h1>
+    <div class="row">
+      <div class="col">
+        <h3>November 8th</h3>
+        <div class="row">
+          <div class="col col-12">
+            <div class="card-schedule">
+              <div class="card-title">
+                <h4>
+                  Check-In Begins
+                </h4>
+                <p class="card-text">
+                  5:00 PM @ 1st Floor Lafferre - West Entrance
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col">
+        <h3>November 9th</h3>
+        <div class="row">
+          <div class="col col-12">
+            <div class="card-schedule">
+              <div class="card-title">
+                <h4>
+                  Check-In Begins
+                </h4>
+                <p class="card-text">
+                  5:00 PM @ 1st Floor Lafferre - West Entrance
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <h3>November 10th</h3>
+        <div class="row">
+          <div class="col col-12">
+            <div class="card-schedule">
+              <div class="card-title">
+                <h4>
+                  Check-In Begins
+                </h4>
+                <p class="card-text">
+                  5:00 PM @ 1st Floor Lafferre - West Entrance
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="prizes_section">
+    <h1>Prizes</h1>
+
+  </div>
+
+  <div id="sponsors_section">
+    <h1>Sponsors</h1>
+    <div class="gold_sponsor">
+      <img src="tiger.png">
+    </div>
+  </div>
+
+  <!-- Form Section -->
+
+  <div id="footer">
+    <p>Contact Us</p>
+  </div>
+
+  <script>
+    sections = ["faq", "schedule", "prizes", "sponsors"]
+    $(window).scroll(function() {
+      for (i in sections) {
+        name = sections[i]
+        if ($("#" + name + "_section").visible()) {
+          $("#" + name + "_link").removeClass("nav-inactive");
+          $("#" + name + "_link").addClass("nav-active");
+        } else {
+          if ($("#" + name + "_link").hasClass("nav-active")) {
+            $("#" + name + "_link").removeClass("nav-active");
+            $("#" + name + "_link").addClass("nav-inactive");
           }
-        } 
-      });
-    </script>
-  </body>
-</html>
+        }
+      }
+    });
+
+    //      $("#register-button").click(function() {
+    //        if($("#registration-form").is(":visible")) {
+    //          $("#registration-form").hide();
+    //        } else {
+    //          $("#registration-form").show();
+    //        }
+    //      })
+  </script>
+</body></html>

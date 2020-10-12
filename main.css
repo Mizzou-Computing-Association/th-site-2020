@@ -70,6 +70,14 @@ nav a:hover {
   max-width: 300px;
 }
 
+#register-button {
+  position: absolute;
+  top: 600px;
+  width: 20%;
+  left: 40%;
+  font-family: Outage, sans-serif;
+}
+
 #faq_section {
   width: 60%;
   padding-top: 50px;
@@ -129,16 +137,14 @@ nav a:hover {
   top: 3500px;
 }
 
-#registration-form {
-  position: absolute;
-  top: 3700px;
-  width: 60%;
-  left: 20%;
+.modal-dialog {
+  max-width: 60%;
 }
 
 #registration-form div {
   text-align: left;
 }
+
 
 #registration-form a {
   text-decoration: underline;
