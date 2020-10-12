@@ -183,20 +183,106 @@
       </div>
     </div>
     
+      
+    <!-- Form Section -->
     <div id="registration-form">
       <form>
-        <div class="form-group">
-          <label for="inputFirst">First Name</label>
-          <input type="text" class="form-control" id="inputFirst">
-        </div>
-        <div class="form-group">
-          <label for="inputLast">Last Name</label>
-          <input type="text" class="form-control" id="inputLast">
-        </div>
+        <div class= "row">
+            <div class="col">
+                <div class="form-group">
+                  <label for="inputFirst">First Name</label>
+                  <input type="text" class="form-control" id="inputFirst" placeholder="Required">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                  <label for="inputLast">Last Name</label>
+                  <input type="text" class="form-control" id="inputLast" placeholder="Required">
+                </div>
+            </div>
+          </div>
         <div class="form-group">
           <label for="inputEmail1">Email address</label>
-          <input type="email" class="form-control" id="inputEmail1">
+          <input type="email" class="form-control" id="inputEmail1" placeholder="Required">
         </div>
+        <div class= "row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="inputPhone">Phone Number</label>
+                    <div class="input1"><input type="tel" placeholder="Required">
+                    <p class="info">FORMAT: (Area Code)-888-8888</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <label class="mr-sm-2" for="inlineFormCustomSelect">School</label>
+                <select class="form-control">
+                    <option>Optional</option>
+                </select>
+            </div> 
+        </div>
+        <div class= "row">
+            <div class="col">
+                <div class="form-group">
+                <label for="formGroupExampleInput">Gender (optional): </label>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                      <label class="form-check-label" for="inlineCheckbox1">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                      <label class="form-check-label" for="inlineCheckbox2">Female</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" >
+                      <label class="form-check-label" for="inlineCheckbox3">Other</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="form-group">
+                  <label class="mr-sm-2" for="inlineFormCustomSelect">Ethnicity</label>
+                <select class="form-control">
+                    <option></option>
+                    <option>American Indian or Alaskan Native</option>
+                    <option>Asian/Pacific Islander</option>
+                    <option>Black or African American</option>
+                    <option>Hispanic</option>
+                    <option>White/Caucasian</option>
+                    <option>Multiple ethnicity/Other</option>
+                    <option>Prefer not to answer</option>
+                </select>
+                </div>
+            </div>
+          </div>
+        <div class= "row">
+            <div class="col">
+                <div class="form-group">
+                  <label for="inputMajor">Major</label>
+                  <input type="text" class="form-control" placeholder="Optional">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                  <label for="inputLevel">Current Level of Study</label>
+                  <input type="text" class="form-control" placeholder="Optional">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                  <label for="inputGradYear">Month and Year of Graduation</label>
+                  <input type="text" class="form-control" placeholder="Optional (example: May 2021)">
+                </div>
+            </div>
+          </div>
+          
+        
+              <label for="inputEmail1">How Did You Hear About Us?</label>
+              <input type="email" class="form-control" id="inputEmail1" placeholder="Optional">
+          
+        
+
         <div class="form-group form-check">
           <input type="checkbox" class="form-check-input" id="check1">
           <label class="form-check-label" for="check1">I have read and agree to the <a href="http://mlh.io/code-of-conduct" target="_blank">MLH Code of Conduct</a></label>
