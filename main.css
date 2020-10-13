@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
   font-family: "Avenir;
+
 }
 
 a, a:hover {
@@ -10,6 +11,20 @@ a, a:hover {
 
 h1 {
   font-family: "Outage", sans-serif;
+}
+
+h2 {
+  font-weight: 800;
+}
+
+h3 {
+  font-weight: 750;
+}
+
+h4 {
+  font-size: 32pt;
+  font-family: "Outage", sans-serif;
+  display: inline;
 }
 
 div {
@@ -52,8 +67,21 @@ nav a:hover {
   animation-fill-mode: forwards;
 }
 
+#social-container {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  width: 30%;
+  margin: 10px auto 0px auto;
+}
+
+#social-container > a:hover {
+  color: orange;
+}
+
 #landing {
-  background-color: #fef8e2;
+  width: 30%;
+  background-color: rgba(190, 190, 190, 0.6);
   color: black;
   padding: 15px 25px;
   text-align: center;
@@ -64,18 +92,40 @@ nav a:hover {
   transform: translate(-50%, -50%);
   max-width: 100%;
   vertical-align: middle;
+  z-index: 2;
 }
 
-#landing img{
+#landing img {
   max-width: 300px;
 }
 
+.logo {
+  display: block;
+  margin: 0px auto;
+}
+
+#date {
+  font-size: 16pt;
+}
+
+#date > h1 {
+  font-size: 16pt;
+  display: inline;
+}
+
 #register-button {
-  position: absolute;
-  top: 600px;
-  width: 20%;
-  left: 40%;
   font-family: Outage, sans-serif;
+  background-color: black;
+  border: 0px;
+}
+
+#register-button:hover {
+  background-color: orange;
+}
+
+.section-header {
+  text-align: left;
+  color: white;
 }
 
 #faq_section {
@@ -111,25 +161,78 @@ nav a:hover {
   padding-top: 50px;
   position: absolute;
   top: 2200px;
+  width: 60%;
+  left: 20%;
+}
+
+.section-wrapper {
+  background-color: cornsilk;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#prizes_section .row {
+  padding-bottom: 10px;
+}
+
+#prizes_section hr {
+  border: 1.5px solid lightgray;
+  width: 90%;
 }
 
 #sponsors_section {
   padding-top: 50px;
   position: absolute;
-  top: 2700px;
+  top: 3100px;
+  width: 60%;
+  left: 20%;
 }
 
-.gold_sponsor {
-  width: 200px;
-  height: 150px;
-  margin: 25px;
+#sponsors_section div:hover {
+  animation: grow-logo 0.5s;
+  animation-fill-mode: both;
+}
+
+.gold-sponsor {
+  width: 300px;
+  height: 200px;
+  margin: 25px auto;
   background-color: gray;
   border-radius: 5px;
 }
 
-.gold_sponsor img {
+.gold-sponsor img {
+  max-width: 300px;
+  max-height: 200px;
+  padding: 15px;
+}
+
+.silver-sponsor {
+  width: 250px;
+  height: 175px;
+  margin: 25px auto;
+  background-color: gray;
+  border-radius: 5px;
+}
+
+.silver-sponsor img {
+  max-width: 250px;
+  max-height: 175px;
+  padding: 15px;
+}
+
+.bronze-sponsor {
+  width: 200px;
+  height: 150px;
+  margin: 25px auto;
+  background-color: gray;
+  border-radius: 5px;
+}
+
+.bronze-sponsor img {
   max-width: 200px;
   max-height: 150px;
+  padding: 15px;
 }
 
 #footer {
@@ -168,6 +271,20 @@ nav a:hover {
   font-family: "Avenir", sans-serif;
 }
 
+table {
+  width: 100%;
+  text-align: center;
+  font-family: Outage, sans-serif;
+}
+
+td.header {
+  font-size: 32pt;
+}
+
+.orange {
+  color: orange;
+}
+
 /***   FONTS    ***/
 
 @font-face {
@@ -186,6 +303,7 @@ nav a:hover {
   from {
     font-size: 16pt;
   }
+
   to {
     font-size: 20pt;
   }
@@ -195,7 +313,72 @@ nav a:hover {
   from {
     font-size: 20pt;
   }
+
   to {
     font-size: 16pt;
   }
 }
+
+@keyframes grow-logo {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/*** STARS ***/
+div#stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 125%;
+  width: 100%;
+  background-color: #1d1d21;
+}
+
+.star {
+  position: absolute;
+  left: 0px;
+  background-color: white;
+  border-radius: 50%;
+  animation-name: moveX;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.small {
+  top: 10px;
+  width: 3px;
+  height: 3px;
+  animation-duration: 10s;  
+  background-color: gray;
+}
+
+.medium {
+  top: 50px;
+  width: 4px;
+  height: 4px;
+  animation-duration: 8s;  
+}
+
+.big {
+  left: 0px;
+  top: 100px;
+  width: 5px;
+  height: 5px;
+  animation-duration: 6s;  
+}
+
+@keyframes moveX {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(-200px);
+  }
+}
+
+/*** https://codepen.io/DonKarlssonSan/pen/qEQVaK ***/
