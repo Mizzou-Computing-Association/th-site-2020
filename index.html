@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <title>TigerHacks</title>
   <!-- Bootstrap Things -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   <!-- Javascript Things -->
-  <script src="https://use.fontawesome.com/2dcf4e58a9.js"></script>
-  <script type="text/javascript" src="../jquery.visible.js"></script>
+<script src="https://kit.fontawesome.com/aa4307182f.js" crossorigin="anonymous"></script>  <script type="text/javascript" src="../jquery.visible.js"></script>
   <script type="text/javascript" src="stars.js"></script>
   <!-- Import stylesheet from .css file -->
   <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-  <!-- Navigation on different parts of the page -->
+  <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:1" href="https://mlh.io/seasons/2021/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2021-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2021/mlh-trust-badge-2021-white.svg" alt="Major League Hacking 2021 Hackathon Season" style="width:100%"></a>
   <nav>
     <a href="#faq_section" id="faq_link">FAQ</a>
     <a href="#schedule_section" id="schedule_link">Schedule</a>
@@ -33,7 +32,8 @@
   <!-- The main page and square when people enter the website -->
   <div id="landing">
     <img class="logo" src="pictures/tiger.png" />
-    <h4 class="orange">Tiger</h4><h4>Hacks</h4>
+    <h4 class="orange">Tiger</h4>
+    <h4>Hacks</h4>
     <h1 id="date">Nov 6-8 2020</h1>
     <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#regModal" id="register-button">Register now!</button>
     <div id="social-container" class="row">
@@ -43,6 +43,8 @@
       <a href="https://instagram.com/tigerhacks" target="_blank"><i class="fa fa-2x fa-instagram" aria-hidden="true"></i></a>
     </div>
   </div>
+  
+  <h1 id="slogan"><i class="fas fa-angle-double-down"></i> Ready for an adventure? <i class="fas fa-angle-double-down"></i></h1>
 
   <div class="modal fade " id="regModal" data-keyboard="false" tabindex="-1" aria-labelledby="regModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
@@ -126,7 +128,7 @@
 
               <div class="form-group">
                 <label for="exampleFormControlFile1">Resume</label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1" >
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
               </div>
               <!--
               <div class="form-group">
@@ -150,10 +152,14 @@
     </div>
   </div>
 
+  <div id="faq-bg">
+    <img src="pictures/mountains.png" id="mountains">
+    <img src="pictures/hill.png" id="hill">
+  </div>
 
   <!--- FAQ Section -->
-  <div class="accordion" id="faq_section">
-    <h1 class="section-header">Frequently Asked Questions</h1>
+  <h1 class="section-header" id="faq_section">Frequently Asked Questions</h1>
+  <div class="accordion section">
     <div class="card">
       <div class="card-header" id="headingOne">
         <h2 class="mb-0">
@@ -240,157 +246,193 @@
     </div>
   </div>
 
-  <!-- Schedule Section -->
-  <div class="schedule" id="schedule_section">
-    <h1> Schedule </h1>
-    <div class="row">
-      <div class="col">
-        <h3>November 8th</h3>
-        <div class="row">
-          <div class="col col-12">
-            <div class="card-schedule">
-              <div class="card-title">
-                <h4>
-                  Check-In Begins
-                </h4>
-                <p class="card-text">
-                  5:00 PM @ 1st Floor Lafferre - West Entrance
-                </p>
-              </div>
+  <div id="schedule-bg">
+    <!-- Schedule Section -->
+    <h1 class="section-header" id="schedule_section">Schedule</h1>
+    <div class="schedule section">
+      <div class="row">
+        <div class="col">
+          <h3>FRIDAY</h3>
+          <div class="card-schedule">
+            <div class="card-title">
+              <h4>
+                Check-In Begins
+              </h4>
+              <p class="card-text">
+                5:00 PM
+              </p>
+            </div>
+          </div>
+          <div class="card-schedule">
+            <div class="card-title">
+              <h4>
+                Opening Ceremony
+              </h4>
+              <p class="card-text">
+                6:00 PM
+              </p>
+            </div>
+          </div>
+          <div class="card-schedule">
+            <div class="card-title">
+              <h4>
+                Brainstorming Session
+              </h4>
+              <p class="card-text">
+                7:30 PM
+              </p>
+            </div>
+          </div>
+          <div class="card-schedule">
+            <div class="card-title">
+              <h4>
+                YouTube Screenshot Challenge
+              </h4>
+              <p class="card-text">
+                9:00 PM
+              </p>
             </div>
           </div>
         </div>
-
-      </div>
-      <div class="col">
-        <h3>November 9th</h3>
-        <div class="row">
-          <div class="col col-12">
-            <div class="card-schedule">
-              <div class="card-title">
-                <h4>
-                  Check-In Begins
-                </h4>
-                <p class="card-text">
-                  5:00 PM @ 1st Floor Lafferre - West Entrance
-                </p>
-              </div>
+        <div class="col">
+          <h3>SATURDAY</h3>
+          <div class="card-schedule">
+            <div class="card-title">
+              <h4>
+                Jackbox Games
+              </h4>
+              <p class="card-text">
+                3:00 PM
+              </p>
+            </div>
+          </div>
+          <div class="card-schedule">
+            <div class="card-title">
+              <h4>
+                MLH Activity
+              </h4>
+              <p class="card-text">
+                8:00 PM
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <h3>SUNDAY</h3>
+          <div class="card-schedule">
+            <div class="card-title">
+              <h4>
+                Submissions Due
+              </h4>
+              <p class="card-text">
+                11:00 AM
+              </p>
+            </div>
+          </div>
+          <div class="card-schedule">
+            <div class="card-title">
+              <h4>
+                Judging Begins
+              </h4>
+              <p class="card-text">
+                12:00 PM
+              </p>
             </div>
           </div>
         </div>
       </div>
-      <div class="col">
-        <h3>November 10th</h3>
-        <div class="row">
-          <div class="col col-12">
-            <div class="card-schedule">
-              <div class="card-title">
-                <h4>
-                  Check-In Begins
-                </h4>
-                <p class="card-text">
-                  5:00 PM @ 1st Floor Lafferre - West Entrance
-                </p>
-              </div>
+    </div>
+  </div>
+
+  <!--  Prizes Section -->
+  <div id="prizes-bg">
+    <h1 class="section-header" id="prizes_section">Prizes</h1>
+    <div class="section">
+      <div class="section-wrapper">
+        <div class="container">
+          <h2>Developer</h2>
+          <div class="row">
+            <div class="col-sm">
+              <h3>First</h3>
+              <p>DJI Mavic Mini</p>
+            </div>
+            <div class="col-sm">
+              <h3>Second</h3>
+              <p>GoPro</p>
+            </div>
+            <div class="col-sm">
+              <h3>Third</h3>
+              <p>3D Printer</p>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="container">
+          <h2>Beginner</h2>
+          <div class="row">
+            <div class="col-sm">
+              <h3>First</h3>
+              <p>DJI Tello</p>
+            </div>
+            <div class="col-sm">
+              <h3>Second</h3>
+              <p>Speaker</p>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="container">
+          <h2>Startup</h2>
+          <div class="row">
+            <div class="col-sm">
+              <h3>First</h3>
+              <p>Google Home Mini</p>
+            </div>
+            <div class="col-sm">
+              <h3>Second</h3>
+              <p>Charging Pad</p>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <h2>Hardware</h2>
+              <h3>Winner</h3>
+              <p>Raspberry Pi Retro Gaming Kit</p>
+            </div>
+            <div class="col-sm">
+              <h2>Female Hack</h2>
+              <h3>Winner</h3>
+              <p>Smartwatch</p>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <img src="pictures/waves.png" id="waves">
   </div>
-
-  <!-- Prizes -->
-  <div id="prizes_section">
-    <div class="section-wrapper">
-      <h1>Prizes</h1>
-      <div class="container">
-        <h2>Developer</h2>
-        <div class="row">
-          <div class="col-sm">
-            <h3>First</h3>
-            <p>DJI Mavic Mini</p>
-          </div>
-          <div class="col-sm">
-            <h3>Second</h3>
-            <p>GoPro</p>
-          </div>
-          <div class="col-sm">
-            <h3>Third</h3>
-            <p>3D Printer</p>
-          </div>
-        </div>
+  
+  <div id="sponsors-bg">
+    <!-- Sponsors Section -->
+    <h1 class="section-header" id="sponsors_section">Sponsors</h1>
+    <div class="section">
+      <div class="gold-sponsor">
+        <a target="_blank" href="https://www.veteransunited.com/"><img src="pictures/sponsors/vu.png"></a>
       </div>
-      <hr>
-      <div class="container">
-        <h2>Beginner</h2>
-        <div class="row">
-          <div class="col-sm">
-            <h3>First</h3>
-            <p>DJI Tello</p>
-          </div>
-          <div class="col-sm">
-            <h3>Second</h3>
-            <p>Speaker</p>
-          </div>
-        </div>
-      </div>
-      <hr>
-      <div class="container">
-        <h2>Startup</h2>
-        <div class="row">
-          <div class="col-sm">
-            <h3>First</h3>
-            <p>Google Home Mini</p>
-          </div>
-          <div class="col-sm">
-            <h3>Second</h3>
-            <p>Charging Pad</p>
-          </div>
-        </div>
-      </div>
-      <hr>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm">
-            <h2>Hardware</h2>
-            <h3>Winner</h3>
-            <p>Raspberry Pi Retro Gaming Kit</p>
-          </div>
-          <div class="col-sm">
-            <h2>Female Hack</h2>
-            <h3>Winner</h3>
-            <p>Smartwatch</p>
-          </div>
-        </div>
+      <div class="bronze-sponsor">
+        <a target="_blank" href="https://www.shelterinsurance.com/"><img src="pictures/sponsors/shelter.png"></a>
       </div>
     </div>
   </div>
-
-  <div id="sponsors_section">
-    <h1>Sponsors</h1>
-    <div class="gold-sponsor">
-      <a target="_blank" href="https://www.veteransunited.com/"><img src="pictures/sponsors/vu.png"></a>
-    </div>
-    <div class="silver-sponsor">
-      <a target="_blank" href=""><img src="pictures/tiger.png"></a>
-    </div>
-    <div class="bronze-sponsor">
-      <a target="_blank" href="https://www.shelterinsurance.com/"><img src="pictures/sponsors/shelter.png"></a>
-    </div>
-  </div>
-
-  <!-- Form Section -->
-
-  <div id="footer">
-    <p>Contact Us</p>
-  </div>
-
+  
   <script>
     sections = ["faq", "schedule", "prizes", "sponsors"]
     $(window).scroll(function() {
       for (i in sections) {
         name = sections[i]
-        if ($("#" + name + "_section").visible()) {
+        if ($("#" + name + "_section").visible(true)) {
           $("#" + name + "_link").removeClass("nav-inactive");
           $("#" + name + "_link").addClass("nav-active");
         } else {
@@ -415,7 +457,9 @@
 
       $.ajax({
         url: "http://127.0.0.1:5000/register",
-        headers: {"X-TigerHacks-API-Key": "nLddBDFdXxoCJDeneHVl7pwE4UrmXeGr"},
+        headers: {
+          "X-TigerHacks-API-Key": "nLddBDFdXxoCJDeneHVl7pwE4UrmXeGr"
+        },
         data: JSON.stringify(reg),
         crossDomain: true,
         contentType: "application/json",
@@ -440,29 +484,25 @@
       $("#date").html('Nov 6-8 2020');
     });
 
-    (function ($) {
-      $(document).ready(function(){
-
-        // hide .navbar first
+    (function($) {
+      $(document).ready(function() {
         $("nav").hide();
-
-        // fade in .navbar
-        $(function () {
-            $(window).scroll(function () {
-                // set distance user needs to scroll before we fadeIn navbar
-                if ($(this).scrollTop() > 600) {
-                    $('nav').fadeIn();
-                } else {
-                    $('nav').fadeOut();
-                }
-            });
+        $(function() {
+          $(window).scroll(function() {
+            if ($(this).scrollTop() > 600) {
+              $('nav').fadeIn();
+              $('#mlh-trust-badge').fadeOut();
+            } else {
+              $('nav').fadeOut();
+              $('#mlh-trust-badge').fadeIn();
+            }
+          });
 
 
         });
 
-    });
-      }(jQuery));
+      });
+    }(jQuery));
   </script>
 </body>
-
 </html>
