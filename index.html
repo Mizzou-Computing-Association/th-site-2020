@@ -58,49 +58,43 @@
         <div class="modal-body">
           <div id="registration-form">
             <form name="regForm" onsubmit="submitRegistration()" method="POST">
-              <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label for="first_name">First Name</label>
-                    <input value="Paul" type="text" class="form-control" name="first_name" placeholder="Required">
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="form-group">
-                    <label for="last_name">Last Name</label>
-                    <input value="Paul" type="text" class="form-control" name="last_name" placeholder="Required">
-                  </div>
-                </div>
+              <div class="form-group">
+                <label for="first_name">First Name</label>
+                <input type="text" class="form-control" name="first_name" required>
               </div>
-              <!--
+              <div class="form-group">
+                <label for="last_name">Last Name</label>
+                <input type="text" class="form-control" name="last_name" required>
+              </div>
               <div class="form-group">
                 <label for="email">Email address</label>
-                <input type="email" class="form-control" name="email" placeholder="Required">
+                <input type="email" class="form-control" name="email" required>
               </div>
--->
               <div class="form-group">
                 <label for="phone_number">Phone Number</label>
-                <div class="input1">
-                  <input value="Paul" type="tel" placeholder="Required" name="phone_number">
-                </div>
+                <input type="text" class="form-control" name="phone_number" placeholder="#########" required>
               </div>
-              <label for="school">School</label>
-              <select name="school" class="form-control">
-                <option>Paul</option>
-              </select>
+              <div class="form-group">
+                <label for="school">School</label>
+                <input type="text" class="form-control" name="school" required>
+              </div>
               <div class="form-group">
                 <label for="grade_level">Current Level of Study</label>
-                <input value="Paul" name="grade_level" type="text" class="form-control" placeholder="Optional">
-              </div>
-              <div class="form-group">
-                <label for="gender">Gender: </label>
-                <select name="gender">
-                  <option>Paul</option>
+                <select name="grade_level" class="form-control" required>
+                  <option>Other</option>
+                  <option>High School</option>
+                  <option>Undergraduate</option>
+                  <option>Graduate</option>
                 </select>
               </div>
               <div class="form-group">
-                <label for="shirt_size">Shirt Size:</label>
-                <select name="shirt_size">
+                <label for="gender">Gender (Optional)</label>
+                <input type="text" class="form-control" name="gender">
+              </div>
+              <div class="form-group">
+                <label for="shirt_size">Shirt Size</label>
+                <select name="shirt_size" class="form-control" required>
+                  <option>Other</option>
                   <option>XS</option>
                   <option>S</option>
                   <option>M</option>
@@ -111,39 +105,32 @@
               </div>
               <div class="form-group">
                 <label for="major">Major</label>
-                <input value="Paul" name="major" type="text" class="form-control" placeholder="Optional">
+                <input name="major" type="text" class="form-control" required>
               </div>
               <div class="form-group">
                 <label for="mailing_address">Mailing Address</label>
-                <input value="Paul" name="mailing_address" type="text" class="form-control" placeholder="Optional">
+                <input name="mailing_address" type="text" class="form-control" placeholder="So we can send you swag!">
               </div>
               <div class="form-group">
-                <label for="birthdate">Date of Birth</label>
-                <input value="Paul" name="birthdate" type="text" class="form-control" placeholder="Optional">
+                <label for="birthdate">Date of Birth (Optional)</label>
+                <input name="birthdate" type="text" class="form-control" placeholder="MM-DD-YYYY">
               </div>
               <div class="form-group">
-                <label for="graduation_year">Month and Year of Graduation</label>
-                <input value="Paul" name="graduation_year" type="text" class="form-control" placeholder="Optional (example: May 2021)">
+                <label for="graduation_year">Month and Year of Graduation (Optional)</label>
+                <input name="graduation_year" type="text" class="form-control" placeholder="Ex. May 2021">
               </div>
-
               <div class="form-group">
-                <label for="exampleFormControlFile1">Resume</label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1">
-              </div>
-              <!--
-              <div class="form-group">
-                <label for="how_you_found_us">How'd You Find Us?</label>
-                <input name="how_you_found_us" type="text" class="form-control" placeholder="">
+                <label for="resume">Resume (Optional)</label>
+                <input type="file" class="form-control-file" id="resume">
               </div>
               <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input">
+                <input type="checkbox" class="form-check-input" required>
                 <label class="form-check-label" for="check1">I have read and agree to the <a href="http://mlh.io/code-of-conduct" target="_blank">MLH Code of Conduct</a></label>
               </div>
               <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input">
+                <input type="checkbox" class="form-check-input" required>
                 <label class="form-check-label" for="check2">I authorize you to share my application/registration information for event administration, ranking, MLH administration, pre- and post-event informational emails, and occasional messages about hackathons in-line with the <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>. I further agree to the terms of both the <a target="_blank" href="https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md">MLH Contest Terms and Conditions</a> and the <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>.</label>
               </div>
--->
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
           </div>
@@ -170,7 +157,7 @@
       </div>
       <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#faq_section">
         <div class="card-body">
-          Participants (“hackers”) spend 36 hours working in small teams to build or code or design projects (“hacks”) that they’re excited about. There are workshops, mentors, food, swag, and buckets of coffee to guide you along the way. You bring your ideas, and we give you everything you need to make them come to life.
+          Participants ("hackers") spend 36 hours working in small teams to build or code or design projects ("hacks") that they're excited about. There are workshops, mentors, food, swag, and buckets of coffee to guide you along the way. You bring your ideas, and we give you everything you need to make them come to life.
         </div>
       </div>
     </div>
@@ -212,7 +199,7 @@
       </div>
       <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faq_section">
         <div class="card-body">
-          Nope! We’ll have lots of resources including workshops and a sweet mentorship system to help beginners get started. We will also dedicate one room to new hackers and have several project ideas to help you get started.
+          Nope! We'll have lots of resources including workshops and a sweet mentorship system to help beginners get started. We will also dedicate one room to new hackers and have several project ideas to help you get started.
         </div>
       </div>
     </div>
@@ -342,10 +329,32 @@
         </div>
       </div>
     </div>
+    <img src="pictures/city.png" id="city">
   </div>
 
   <!--  Prizes Section -->
   <div id="prizes-bg">
+    <div id="background-wrap">
+      <div class="x1">
+          <div class="cloud"></div>
+      </div>
+
+      <div class="x2">
+          <div class="cloud"></div>
+      </div>
+
+      <div class="x3">
+          <div class="cloud"></div>
+      </div>
+
+      <div class="x4">
+          <div class="cloud"></div>
+      </div>
+
+      <div class="x5">
+          <div class="cloud"></div>
+      </div>
+  </div>
     <h1 class="section-header" id="prizes_section">Prizes</h1>
     <div class="section">
       <div class="section-wrapper">
@@ -415,6 +424,32 @@
   </div>
   
   <div id="sponsors-bg">
+<div class="whaleContainer">
+    <div class="whalePos size1">
+        <div class="whaleRotate size1">
+            <div class="whale"></div>
+            <div class="fin"></div>
+        </div>
+    </div>
+    <div class="whalePos size2">
+        <div class="whaleRotate size2">
+            <div class="whale"></div>
+            <div class="fin"></div>
+        </div>
+    </div>
+    <div class="whalePos size3">
+        <div class="whaleRotate size3">
+            <div class="whale"></div>
+            <div class="fin"></div>
+        </div>
+    </div>
+    <div class="whalePos size4">
+        <div class="whaleRotate size4">
+            <div class="whale"></div>
+            <div class="fin"></div>
+        </div>
+    </div>
+</div>
     <!-- Sponsors Section -->
     <h1 class="section-header" id="sponsors_section">Sponsors</h1>
     <div class="section">
@@ -476,13 +511,13 @@
       });
     };
 
-    $("#date").mouseenter(function() {
-      $("#date").html('Ready for an <h1 class="orange">adventure</h1>?');
-    });
-
-    $("#date").mouseleave(function() {
-      $("#date").html('Nov 6-8 2020');
-    });
+//    $("#date").mouseenter(function() {
+//      $("#date").html('Ready for an <h1 class="orange">adventure</h1>?');
+//    });
+//
+//    $("#date").mouseleave(function() {
+//      $("#date").html('Nov 6-8 2020');
+//    });
 
     (function($) {
       $(document).ready(function() {
@@ -503,6 +538,8 @@
 
       });
     }(jQuery));
+    
+    
   </script>
 </body>
 </html>

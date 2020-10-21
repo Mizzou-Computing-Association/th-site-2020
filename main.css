@@ -3,10 +3,6 @@ html {
   font-family: "Avenir";
 }
 
-body {
-  background-color: black;
-}
-
 a,
 a:hover {
   color: black;
@@ -88,7 +84,7 @@ nav a:hover {
 }
 
 #landing img {
-  max-width: 300px;
+  max-width: 80%;
 }
 
 .logo {
@@ -134,7 +130,7 @@ nav a:hover {
   bottom: 20px;
   text-align: center;
   width: 100%;
-  animation: bounce-text 2s ease infinite;
+  animation: bounce 2s ease infinite;
 }
 
 .fa-angle-double-down {
@@ -197,8 +193,7 @@ nav a:hover {
   height: 100%;
   width: 100%;
   position: relative;
-  margin-top: 300px;
-  padding-top: 200px;
+  margin-top: 200px;
   background-color: mediumseagreen;
   padding-bottom: 50px;
 }
@@ -213,6 +208,14 @@ nav a:hover {
 
 .card-title h4 {
   font-size: 20px;
+}
+
+#city {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 50px;
+  z-index: 2;
 }
 
 #prizes-bg {
@@ -245,8 +248,7 @@ nav a:hover {
   height: 100%;
   width: 100%;
   position: relative;
-  margin-top: 300px;
-  padding-top: 200px;
+  margin-top: 200px;
   background-color: cadetblue;
   padding-bottom: 50px;
 }
@@ -378,7 +380,7 @@ div.gold-sponsor:hover, div.silver-sponsor:hover, div.bronze-sponsor:hover {
   }
 }
 
-@keyframes bounce-text {
+@keyframes bounce {
   0% {
     transform: translateY(0);
   }
@@ -461,3 +463,416 @@ div#stars {
 }
 
 /*** https://codepen.io/DonKarlssonSan/pen/qEQVaK ***/
+
+
+body {
+/*
+	background: #00b4ff;
+	color: #333;
+	font: 100% Arial, Sans Serif;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+*/
+	overflow-x: hidden;
+}
+
+#background-wrap {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+    height: 50%;
+	z-index: 5;
+}
+
+/* KEYFRAMES */
+
+@-webkit-keyframes animateCloud {
+    0% {
+        margin-left: -1000px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@-moz-keyframes animateCloud {
+    0% {
+        margin-left: -1000px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@keyframes animateCloud {
+    0% {
+        margin-left: -1000px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+/* ANIMATIONS */
+
+.x1 {
+	-webkit-animation: animateCloud 35s linear infinite;
+	-moz-animation: animateCloud 35s linear infinite;
+	animation: animateCloud 35s linear infinite;
+	
+	-webkit-transform: scale(0.65);
+	-moz-transform: scale(0.65);
+	transform: scale(0.65);
+}
+
+.x2 {
+	-webkit-animation: animateCloud 20s linear infinite;
+	-moz-animation: animateCloud 20s linear infinite;
+	animation: animateCloud 20s linear infinite;
+	
+	-webkit-transform: scale(0.3);
+	-moz-transform: scale(0.3);
+	transform: scale(0.3);
+}
+
+.x3 {
+	-webkit-animation: animateCloud 30s linear infinite;
+	-moz-animation: animateCloud 30s linear infinite;
+	animation: animateCloud 30s linear infinite;
+	
+	-webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	transform: scale(0.5);
+}
+
+.x4 {
+	-webkit-animation: animateCloud 18s linear infinite;
+	-moz-animation: animateCloud 18s linear infinite;
+	animation: animateCloud 18s linear infinite;
+	
+	-webkit-transform: scale(0.4);
+	-moz-transform: scale(0.4);
+	transform: scale(0.4);
+}
+
+.x5 {
+	-webkit-animation: animateCloud 25s linear infinite;
+	-moz-animation: animateCloud 25s linear infinite;
+	animation: animateCloud 25s linear infinite;
+	
+	-webkit-transform: scale(0.55);
+	-moz-transform: scale(0.55);
+	transform: scale(0.55);
+}
+
+/* OBJECTS */
+
+.cloud {
+	background: #fff;
+	background: -moz-linear-gradient(top,  #fff 5%, #f1f1f1 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#fff), color-stop(100%,#f1f1f1));
+	background: -webkit-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+	background: -o-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+	background: -ms-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+	background: linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#f1f1f1',GradientType=0 );
+	
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	
+	-webkit-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+
+	height: 60px;
+	position: relative;
+	width: 175px;
+}
+
+.cloud:after, .cloud:before {
+    background: #fff;
+	content: '';
+	position: absolute;
+	z-indeX: -1;
+}
+
+.cloud:after {
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+
+	height: 50px;
+	left: 25px;
+	top: -25px;
+	width: 50px;
+}
+
+.cloud:before {
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+
+	width: 90px;
+	height: 90px;
+	right: 25px;
+	top: -45px;
+}
+
+/*
+.whaleContainer {
+	position: relative;
+	transform: translateX(0);
+	animation-name: whaleTranslate;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	z-index: 7000;
+}
+@keyframes whaleTranslate {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(380px);
+	}
+}
+
+.whalePos {
+	position: absolute;
+	z-index: 1000;
+	&.size1 {
+		top: 150px;
+		left: -210px;
+	}
+	&.size2 {
+		top: 100px;
+		left: -280px;
+	}
+	&.size3 {
+		top: 120px;
+		left: -140px;
+	}
+	&.size4 {
+		top: 190px;
+		left: -310px;
+	}
+}
+.whaleRotate {
+	position: relative;
+	width: 245px;
+	height: 110px;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	&.size1 {
+		transform: rotate(0) scale(.35);
+		animation-name: whaleMovementXLarge;
+	}
+	&.size2 {
+		transform: rotate(0) scale(.25);
+		animation-name: whaleMovementLarge;
+	}
+	&.size3 {
+		transform: rotate(0) scale(.15);
+		animation-name: whaleMovementMedium;
+	}
+	&.size4 {
+		transform: rotate(0) scale(.1);
+		animation-name: whaleMovementSmall;
+	}
+	
+}
+@keyframes whaleMovementXLarge {
+	0% {
+		transform: rotate(0) scale(.35);
+	}
+	100% {
+		transform: rotate(10deg) scale(.35);
+	}
+}
+@keyframes whaleMovementLarge {
+	0% {
+		transform: rotate(0) scale(.25);
+	}
+	100% {
+		transform: rotate(10deg) scale(.25);
+	}
+}
+@keyframes whaleMovementMedium {
+	0% {
+		transform: rotate(0) scale(.15);
+	}
+	100% {
+		transform: rotate(10deg) scale(.15);
+	}
+}
+@keyframes whaleMovementSmall {
+	0% {
+		transform: rotate(0) scale(.1);
+	}
+	100% {
+		transform: rotate(10deg) scale(.1);
+	}
+}
+.whale {
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	background: radial-gradient(at 40% 20%, #95d6df 0%,#95d6df 35%,#6db3c2 35%,#6db3c2 60%,#6db3c2 70%,#407a8b 70%,#407a8b 100%);
+	clip-path: polygon(15% 0%, 18.5% 20%, 19% 37%, 27% 46.5%, 33% 46.5%, 42.5% 37%, 43% 26.5%, 50.5% 28.5%, 65.5% 17%, 88.5% 12.5%, 97.5% 22.5%, 100% 49.5%, 97% 65.5%, 89.5% 81.5%, 64.5% 86.5%, 43.5% 80%, 23% 59.5%, 15.5% 41.5%, 8% 40%, 1.5% 28.5%, 6.5% 25%, 12.5% 26.5%, 12% 14%);
+}
+
+.fin {
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	z-index: 5000;
+	width: 50px;
+	height: 30px;
+	background: #407A8B;
+	transform-origin: center top;
+	clip-path: polygon(30% 50%, 60% 0, 100% 0%, 80% 60%, 60% 80%, 0 100%);
+	animation-name: fin;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+}
+
+@keyframes fin {
+	0% {
+		transform: rotate3d(0, 0, 0, 0deg);
+	}
+	100% {
+		transform: rotate3d(1, 1, 1, 30deg);
+	}
+}*/
+.whaleContainer {
+	 position: relative;
+	 transform: translateX(0);
+	 animation-name: whaleTranslate;
+	 animation-duration: 15s;
+	 animation-iteration-count: infinite;
+	 animation-timing-function: linear;
+	 z-index: 3;
+}
+ @keyframes whaleTranslate {
+	 0% {
+		 transform: translateX(-25%);
+	}
+	 100% {
+		 transform: translateX(125%);
+	}
+}
+ .whalePos {
+	 position: absolute;
+	 z-index: 3;
+}
+ .whalePos.size1 {
+	 top: 150px;
+	 left: -210px;
+}
+ .whalePos.size2 {
+	 top: 100px;
+	 left: -280px;
+}
+ .whalePos.size3 {
+	 top: 120px;
+	 left: -140px;
+}
+ .whalePos.size4 {
+	 top: 190px;
+	 left: -310px;
+}
+ .whaleRotate {
+	 position: relative;
+	 width: 245px;
+	 height: 110px;
+	 animation-duration: 2s;
+	 animation-iteration-count: infinite;
+	 animation-direction: alternate;
+}
+ .whaleRotate.size1 {
+	 transform: rotate(0) scale(0.65);
+	 animation-name: whaleMovementXLarge;
+}
+ .whaleRotate.size2 {
+	 transform: rotate(0) scale(0.55);
+	 animation-name: whaleMovementLarge;
+}
+ .whaleRotate.size3 {
+	 transform: rotate(0) scale(0.45);
+	 animation-name: whaleMovementMedium;
+}
+ .whaleRotate.size4 {
+	 transform: rotate(0) scale(0.4);
+	 animation-name: whaleMovementSmall;
+}
+ @keyframes whaleMovementXLarge {
+	 0% {
+		 transform: rotate(0) scale(0.35);
+	}
+	 100% {
+		 transform: rotate(10deg) scale(0.35);
+	}
+}
+ @keyframes whaleMovementLarge {
+	 0% {
+		 transform: rotate(0) scale(0.25);
+	}
+	 100% {
+		 transform: rotate(10deg) scale(0.25);
+	}
+}
+ @keyframes whaleMovementMedium {
+	 0% {
+		 transform: rotate(0) scale(0.15);
+	}
+	 100% {
+		 transform: rotate(10deg) scale(0.15);
+	}
+}
+ @keyframes whaleMovementSmall {
+	 0% {
+		 transform: rotate(0) scale(0.1);
+	}
+	 100% {
+		 transform: rotate(10deg) scale(0.1);
+	}
+}
+ .whale {
+	 position: absolute;
+	 width: 500px;
+	 height: 200px;
+  z-index: 3;
+	 background: radial-gradient(at 40% 20%, #95d6df 0%, #95d6df 35%, #6db3c2 35%, #6db3c2 60%, #6db3c2 70%, #407a8b 70%, #407a8b 100%);
+	 clip-path: polygon(15% 0%, 18.5% 20%, 19% 37%, 27% 46.5%, 33% 46.5%, 42.5% 37%, 43% 26.5%, 50.5% 28.5%, 65.5% 17%, 88.5% 12.5%, 97.5% 22.5%, 100% 49.5%, 97% 65.5%, 89.5% 81.5%, 64.5% 86.5%, 43.5% 80%, 23% 59.5%, 15.5% 41.5%, 8% 40%, 1.5% 28.5%, 6.5% 25%, 12.5% 26.5%, 12% 14%);
+}
+ .fin {
+	 position: absolute;
+	 top: 100%;
+	 left: 75%;
+	 z-index: 3;
+	 width: 100px;
+	 height: 60px;
+	 background: #407a8b;
+	 transform-origin: center top;
+	 clip-path: polygon(30% 50%, 60% 0, 100% 0%, 80% 60%, 60% 80%, 0 100%);
+	 animation-name: fin;
+	 animation-duration: 2s;
+	 animation-iteration-count: infinite;
+	 animation-direction: alternate;
+	 animation-timing-function: linear;
+}
+ @keyframes fin {
+	 0% {
+		 transform: rotate3d(0, 0, 0, 0deg);
+	}
+	 100% {
+		 transform: rotate3d(1, 1, 1, 30deg);
+	}
+}
+ 
