@@ -32,7 +32,6 @@ div {
 }
 
 #mobileHeader {
-  display: none;
   height: 40px;
   position: fixed;
   top: 0px;
@@ -893,8 +892,3 @@ body {
 	}
 }
  
-@media (max-width: 800px) {
-  #mobileHeader {
-    display: block;
-  }
-}

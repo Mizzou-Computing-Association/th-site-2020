@@ -538,7 +538,12 @@
       });
     }(jQuery));
 
-
+    if ($(window).width() < 800) {
+       $('#mobileHeader').show();
+    }
+    else {
+       $('#mobileHeader').hide();
+    }
   </script>
 </body>
 </html>
