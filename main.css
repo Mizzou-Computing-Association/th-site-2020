@@ -31,6 +31,23 @@ div {
   text-align: center;
 }
 
+#mobileHeader {
+  display: none;
+  height: 40px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: midnightblue;
+  z-index: 10;
+}
+
+#mobileHeader p {
+  color: white;
+  font-family: 'Outage', sans-serif;
+  padding-top: 10px;
+}
+
 nav {
   position: fixed;
   display: flex;
@@ -876,3 +893,8 @@ body {
 	}
 }
  
+@media (max-width: 800px) {
+  #mobileHeader {
+    display: block;
+  }
+}
