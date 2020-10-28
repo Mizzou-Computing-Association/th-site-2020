@@ -40,7 +40,7 @@
     <h4 class="orange">Tiger</h4>
     <h4>Hacks</h4>
     <h1 id="date">Nov 6-8 2020</h1>
-    <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#regModal" id="register-button">Register now!</button>
+    <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#regModal" id="register-button" onclick="showReg()">Register now!</button>
     <div id="social-container" class="row">
       <a href="mailto:muengrtigerhacks@missouri.edu" target="_blank"><i class="fa fa-2x fa-envelope-square" aria-hidden="true"></i></a>
       <a href="https://twitter.com/tigerhackshd" target="_blank"><i class="fa fa-2x fa-twitter-square" aria-hidden="true"></i></a>
@@ -62,7 +62,7 @@
         </div>
         <div class="modal-body">
           <div id="registration-form">
-            <form name="regForm" onsubmit="return submitRegistration();">
+            <form id="reg-form" name="regForm" onsubmit="return submitRegistration();">
               <div class="form-group">
                 <label for="first_name">First Name</label>
                 <input type="text" class="form-control" name="first_name" required>
@@ -140,6 +140,9 @@
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+          </div>
+          <div id="registration-feedback">
+            <p id="reg-notif">Registration was successful!</p>
           </div>
         </div>
       </div>
@@ -494,13 +497,10 @@
         reg[this.name] = $(this).val();
       });
 
-      console.log('About to submit');
-      console.log(JSON.stringify(reg))
-
       $.ajax({
         url: "http://localhost:5000/register",
         headers: {
-          "X-TigerHacks-API-Key": "UQYyTKDeEqW1juqWA0v8rZ7tERYfChYj"
+          "X-TigerHacks-API-Key": ""
         },
         data: JSON.stringify(reg),
         crossDomain: true,
@@ -508,12 +508,14 @@
         dataType: "json",
         type: "POST",
         success: function(data) {
-          console.log('Success!');
-          console.log(data);
+          $('#reg-notif').html('Registration was successful!');
+          $('#reg-notif').show();
+          $('#registration-form').hide();
         },
         error: function(errMsg) {
-          console.log('Error');
-          console.log(errMsg);
+          $('#reg-notif').html('ERROR: ' + errMsg['responseJSON']['msg']);
+          $('#reg-notif').show();
+          $('#registration-form').hide();
         }
       });
       return false;
@@ -544,6 +546,12 @@
     }
     else {
        $('#mobileHeader').hide();
+    }
+    
+    function showReg() {
+      $('#reg-notif').hide();
+      document.getElementById('reg-form').reset();
+      $('#registration-form').show();
     }
   </script>
 </body>
