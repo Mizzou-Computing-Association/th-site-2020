@@ -316,6 +316,24 @@ div.gold-sponsor:hover, div.silver-sponsor:hover, div.bronze-sponsor:hover {
   padding: 15px;
 }
 
+.partner {
+  display: inline-block;
+  width: 200px;
+  height: 150px;
+  margin: 25px auto;
+  background-color: rgba(150, 150, 150, .9);
+  border-radius: 5px;
+}
+
+.partner img {
+  max-width: 200px;
+  max-height: 150px;
+  padding: 15px;
+  margin: auto 0px;
+  height: 100%;
+  vertical-align: middle;
+}
+
 .modal-dialog {
   max-width: 60%;
 }
