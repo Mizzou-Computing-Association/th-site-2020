@@ -103,10 +103,34 @@ nav a:hover {
   max-width: 80%;
 }
 
+#QR {
+  width: 20%;
+  color: black;
+  padding: 10px 4px;
+  
+  position: absolute;
+  border-radius: 5px;
+  top: 10%;
+  left: 12%;
+  transform: translate(-60%, -50%);
+  max-width: 100%;
+  vertical-align: middle;
+  z-index: 2;
+
+
+}
+
 .logo {
   display: block;
   margin: 0px auto;
 }
+
+.QR {
+           
+    color: white;
+}
+
+
 
 #date {
   font-size: 16pt;
